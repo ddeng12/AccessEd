@@ -1,0 +1,321 @@
+/* Modern Course Template Styling */
+:root {
+    --primary: #FFD700;
+    --secondary: #FFC107;
+    --dark: #333333;
+    --light: #FFFFFF;
+    --accent: #FF6B6B;
+    --gradient: linear-gradient(135deg, #FFD700, #FFC107);
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --hover-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Course Header */
+.course-header {
+    background: var(--gradient);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('pattern.png') repeat;
+    opacity: 0.1;
+}
+
+.course-header h1 {
+    color: var(--dark);
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Resource Navigation */
+.resource-nav {
+    background: var(--light);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resource-tab {
+    background: var(--light);
+    color: var(--dark);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid var(--primary);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.resource-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.resource-tab:hover::before,
+.resource-tab.active::before {
+    transform: translateX(0);
+}
+
+.resource-tab:hover,
+.resource-tab.active {
+    color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* Resource Cards Container */
+.resources-container {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+/* Resource Card */
+.resource-card {
+    background: var(--light);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.resource-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--hover-shadow);
+}
+
+.resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient);
+}
+
+.card-body {
+    padding: 30px;
+    text-align: center;
+}
+
+.resource-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.resource-card:hover .resource-icon {
+    transform: rotateY(180deg);
+}
+
+.card-title {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.btn-view, 
+.btn-download {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-view {
+    background: var(--light);
+    color: var(--dark);
+    border: 2px solid var(--primary);
+}
+
+.btn-download {
+    background: var(--gradient);
+    color: var(--dark);
+    border: none;
+}
+
+.btn-view:hover,
+.btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-view i,
+.btn-download i {
+    transition: transform 0.4s ease;
+}
+
+.btn-view:hover i {
+    transform: scale(1.2);
+}
+
+.btn-download:hover i {
+    animation: bounce 0.8s infinite;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--light);
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: var(--shadow);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.empty-state h3 {
+    color: var(--dark);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .resource-tab {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .btn-view, 
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+    }
+} 
+
+/* Update the resource content display rules */
+.resource-content {
+    display: none;
+}
+
+#past-papers {
+    display: block; /* Show past papers by default */
+}
+
+.resource-content.active {
+    display: block;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    background: var(--light);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    color: var(--dark);
+    padding: 0.7rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+    background: var(--accent-yellow);
+    color: var(--dark);
+}
+
+.dropdown-toggle::after {
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+/* Ensure dropdown works on hover */
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+} 

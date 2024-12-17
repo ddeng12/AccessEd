@@ -1,0 +1,205 @@
+/* Color Variables */
+:root {
+    --primary-color: #1a5f7a;
+    --secondary-color: #2c8e5f;
+    --accent-color-orange: #ff6b35;
+    --accent-color-yellow: #ffd166;
+    --background-light: #f7f7f7;
+    --text-primary: #2c3e50;
+    --text-secondary: #34495e;
+    --white: #ffffff;
+}
+
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.custom-navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.donate-btn {
+    background-color: var(--accent-color-orange);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Welcome Section */
+.welcome-section {
+    position: relative;
+    color: var(--white);
+    padding: 100px 0;
+    text-align: left;
+}
+
+.welcome-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+.welcome-content h1 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.welcome-content .lead {
+    color: rgba(255,255,255,0.8);
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color-orange);
+    transform: translateX(-50%);
+}
+
+/* Courses Section */
+.course-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.course-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.course-card i {
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.course-card h3 {
+    color: var(--text-primary);
+}
+
+.course-card p {
+    color: var(--text-secondary);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--white);
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color) !important;
+}
+
+.footer a {
+    color: rgba(255,255,255,0.7);
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .welcome-section {
+        text-align: center;
+    }
+
+    .welcome-content {
+        padding: 0 15px;
+    }
+}
+
+/* Donate Modal Styles */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.modal-header .btn-close {
+    background-color: var(--white);
+    opacity: 1;
+}
