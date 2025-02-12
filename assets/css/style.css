@@ -1,0 +1,405 @@
+/* Course Cards */
+.course-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color-yellow);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.course-content {
+    padding: 1rem;
+}
+
+.course-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.course-info {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.course-info i {
+    margin-right: 0.5rem;
+    color: var(--accent-color-yellow);
+}
+
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.course-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.course-btn {
+    background-color: var(--accent-color-yellow);
+    color: var(--primary-color);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.course-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .course-image {
+        height: 150px;
+    }
+} 
+
+/* No Events State */
+.empty-events-state {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-icon {
+    margin-bottom: 1.5rem;
+}
+
+.calendar-icon i {
+    font-size: 3.5rem;
+    color: #FFD700;
+    opacity: 0.9;
+}
+
+.empty-events-text h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.empty-events-text p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.event-types {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.event-types span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    border-radius: 50px;
+    color: #333;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.event-types i {
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .empty-events-state {
+        padding: 2rem 1rem;
+    }
+    
+    .empty-events-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .event-types {
+        gap: 1rem;
+    }
+    
+    .event-types span {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+} 
+
+/* Events Grid Styles */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.event-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+}
+
+.event-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 1.5rem;
+}
+
+.event-content h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.event-meta i {
+    color: #FFD700;
+}
+
+.event-register-btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.event-register-btn:hover {
+    background: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-image {
+        height: 180px;
+    }
+} 
+
+/* Modern Animations and Effects */
+:root {
+    --transition-speed: 0.3s;
+    --hover-lift: -5px;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, .card, .event-item, .course-card {
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Navbar Animation */
+.custom-navbar {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-navbar.scroll-down {
+    transform: translateY(-100%);
+}
+
+.custom-navbar.scroll-up {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Card Interactions */
+.event-item, .course-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+    );
+    backdrop-filter: blur(10px);
+}
+
+.event-item::before, .course-card::before {
+    content: '';
+    position: absolute;
+    top: var(--mouse-y, 0);
+    left: var(--mouse-x, 0);
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.event-item:hover::before, .course-card:hover::before {
+    opacity: 1;
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Form Interactions */
+.form-floating {
+    position: relative;
+}
+
+.form-floating label {
+    transition: all 0.3s ease;
+    transform-origin: left top;
+}
+
+.form-floating.focused label {
+    transform: scale(0.85) translateY(-0.5rem);
+    color: var(--accent-color-yellow);
+}
+
+/* Button Hover Effects */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Welcome Section Enhancement */
+.welcome-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 215, 0, 0.1) 0%,
+        transparent 100%
+    );
+    transform: translateY(-100%);
+    animation: gradientSlide 8s ease-in-out infinite;
+}
+
+@keyframes gradientSlide {
+    0% { transform: translateY(-100%); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+/* Enhanced Event Cards */
+.event-meta span {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.event-meta i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.event-meta span:hover i {
+    transform: translateY(-50%) scale(1.2);
+} 

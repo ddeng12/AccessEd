@@ -1,0 +1,19 @@
+<IfModule mod_mime.c>
+    AddType application/pdf .pdf
+    AddType application/msword .doc
+    AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx
+    AddType application/vnd.ms-powerpoint .ppt
+    AddType application/vnd.openxmlformats-officedocument.presentationml.presentation .pptx
+    AddType text/plain .txt
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+Options -Indexes
+
+<FilesMatch "\.(pdf|doc|docx|ppt|pptx|txt)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch> 

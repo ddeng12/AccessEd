@@ -1,0 +1,274 @@
+/* Biology Page Comprehensive Styling */
+.biology-page {
+    --subject-primary: #2ecc71;     /* Vibrant green */
+    --subject-secondary: #27ae60;   /* Darker green */
+    --subject-light: #e8f5e9;       /* Very light green */
+    --subject-text: #2c3e50;        /* Dark text */
+}
+
+.biology-page .course-resources {
+    background: linear-gradient(135deg, var(--subject-light) 0%, #f1f8f1 100%);
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.biology-page .resource-card {
+    background-color: white;
+    border-radius: 15px;
+    border-top: 5px solid var(--subject-primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.biology-page .resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--subject-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.biology-page .resource-card:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.biology-page .resource-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.biology-page .resource-icon i {
+    font-size: 4rem;
+    color: var(--subject-primary);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.biology-page .resource-card:hover .resource-icon i {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.biology-page .btn-primary {
+    background-color: var(--subject-primary);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.biology-page .btn-primary:hover {
+    background-color: var(--subject-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+/* Chemistry Page Comprehensive Styling */
+.chemistry-page {
+    --subject-primary: #e74c3c;     /* Vibrant red */
+    --subject-secondary: #c0392b;   /* Darker red */
+    --subject-light: #ffebee;       /* Very light red */
+    --subject-text: #2c3e50;        /* Dark text */
+}
+
+.chemistry-page .course-resources {
+    background: linear-gradient(135deg, var(--subject-light) 0%, #fff3f2 100%);
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.chemistry-page .resource-card {
+    background-color: white;
+    border-radius: 15px;
+    border-left: 5px solid var(--subject-primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.chemistry-page .resource-icon i {
+    font-size: 4rem;
+    color: var(--subject-primary);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.chemistry-page .btn-primary {
+    background-color: var(--subject-primary);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+
+/* Mathematics Page Comprehensive Styling */
+.mathematics-page {
+    --subject-primary: #3498db;     /* Bright blue */
+    --subject-secondary: #2980b9;   /* Darker blue */
+    --subject-light: #e3f2fd;       /* Very light blue */
+    --subject-text: #2c3e50;        /* Dark text */
+}
+
+.mathematics-page .container {
+    background: linear-gradient(135deg, var(--subject-light) 0%, #f1f8ff 100%);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.mathematics-page .card {
+    border-radius: 15px;
+    border-left: 5px solid var(--subject-primary);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.mathematics-page .card-body {
+    position: relative;
+}
+
+.mathematics-page .card-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--subject-primary);
+    transition: width 0.3s ease;
+}
+
+.mathematics-page .card:hover .card-body::before {
+    width: 100%;
+}
+
+.mathematics-page .btn-primary {
+    background-color: var(--subject-primary);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+/* English Page Comprehensive Styling */
+.english-page {
+    --subject-primary: #f39c12;     /* Vibrant yellow/orange */
+    --subject-secondary: #d35400;   /* Darker orange */
+    --subject-light: #fff3e0;       /* Very light orange */
+    --subject-text: #2c3e50;        /* Dark text */
+}
+
+.english-page .course-resources {
+    background: linear-gradient(135deg, var(--subject-light) 0%, #fff8f1 100%);
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.english-page .resource-card {
+    background-color: white;
+    border-radius: 15px;
+    border-bottom: 5px solid var(--subject-primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    perspective: 1000px;
+}
+
+.english-page .resource-card:hover {
+    transform: rotateX(-5deg);
+}
+
+.english-page .resource-icon i {
+    font-size: 4rem;
+    color: var(--subject-primary);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.english-page .btn-primary {
+    background-color: var(--subject-primary);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+
+/* Swahili Page Comprehensive Styling */
+.swahili-page {
+    --subject-primary: #16a085;     /* Teal green-blue */
+    --subject-secondary: #1abc9c;   /* Lighter teal */
+    --subject-light: #e0f2f1;       /* Very light teal */
+    --subject-text: #2c3e50;        /* Dark text */
+}
+
+.swahili-page .course-resources {
+    background: linear-gradient(135deg, var(--subject-light) 0%, #f1f8f7 100%);
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.swahili-page .resource-card {
+    background-color: white;
+    border-radius: 15px;
+    border-right: 5px solid var(--subject-primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.swahili-page .resource-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background: var(--subject-primary);
+    transition: width 0.3s ease;
+}
+
+.swahili-page .resource-card:hover::after {
+    width: 100%;
+}
+
+.swahili-page .resource-icon i {
+    font-size: 4rem;
+    color: var(--subject-primary);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.swahili-page .btn-primary {
+    background-color: var(--subject-primary);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+
+/* Global Hover and Interaction Styles */
+.resource-card:hover,
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .course-resources {
+        padding-top: 80px;
+    }
+    
+    .resource-card,
+    .card {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,6 @@
+# Place this in uploads/.htaccess
+Options -Indexes
+<FilesMatch "\.(pdf|doc|docx|ppt|pptx|txt)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch> 

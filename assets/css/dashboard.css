@@ -1,0 +1,279 @@
+/* Navigation styles */
+.dashboard-nav {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding-left: 270px; /* Account for sidebar */
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link:hover {
+    background: #f5f5f5;
+    color: #FFD700;
+}
+
+.nav-link.home-link {
+    background: #FFD700;
+    color: #333;
+}
+
+.nav-link.home-link:hover {
+    background: #FFC800;
+    transform: translateY(-2px);
+}
+
+/* Main content area */
+.dashboard-content {
+    margin-top: 80px;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 80px);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 2px solid #FFD700;
+    padding: 1rem 1.5rem;
+}
+
+.card-header h4 {
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Form Styles */
+.form-control:focus, .form-select:focus {
+    border-color: #FFD700;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: #333;
+}
+
+.btn-primary:hover {
+    background-color: #FFC800;
+    border-color: #FFC800;
+    color: #333;
+}
+
+/* Table Styles */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    border-top: none;
+    background-color: #f8f9fa;
+    color: #555;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    margin: 0 0.2rem;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background: #333;
+    padding-top: 60px;
+    transition: all 0.3s ease;
+    z-index: 900;
+}
+
+.sidebar-menu {
+    padding: 1rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    background: #FFD700;
+    color: #333;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 2rem;
+    min-height: calc(100vh - 60px);
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+/* Stat cards */
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card i {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.stat-card h3 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Section visibility */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Responsive sidebar */
+.sidebar-collapsed .sidebar {
+    transform: translateX(-250px);
+}
+
+.sidebar-collapsed .main-content,
+.sidebar-collapsed .dashboard-nav {
+    margin-left: 0;
+    padding-left: 2rem;
+}
+
+/* Add your existing card, form, and table styles here */ 
+
+/* Analytics Section Styles */
+.analytics-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+}
+
+.stat-change {
+    font-size: 0.9rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.stat-change.positive {
+    color: #28a745;
+    background: rgba(40, 167, 69, 0.1);
+}
+
+.stat-change.negative {
+    color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+}
+
+/* Feedback Styles */
+.feedback-row.unread {
+    background-color: rgba(255, 215, 0, 0.1) !important;
+    font-weight: 500;
+}
+
+.status-cell {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.feedback-row.unread .status-cell {
+    color: #FFD700;
+}
+
+.feedback-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-feedback.active {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: #333;
+}
+
+.feedback-row {
+    transition: background-color 0.3s ease;
+} 
